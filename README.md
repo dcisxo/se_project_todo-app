@@ -1,14 +1,16 @@
 # Simple Todo App
 
-Give a brief description of the project here. Feel free to give it a different name.
+An easy to use simple To-Do application. Keep track of what you need to get done and set yourself a deadline! 
 
 ## Functionality
 
-Give a more detailed explanation of the project and its functionality.
+With this application you can keep track of your day to day tasks and set deadlines for you to achieve.
 
 ## Technology
 
-Give a description of the technologies and techniques used. Pictures, GIFs, or screenshots that detail the project features are recommended.
+![image](https://github.com/user-attachments/assets/8661c90d-e76c-4827-a058-ad1bd1915ff9)
+
+
 
 ## Deployment
 
