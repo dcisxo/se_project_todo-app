@@ -16,4 +16,4 @@ With this application you can keep track of your day to day tasks and set deadli
 
 This project is deployed on GitHub Pages:
 
-- ADD LINK HERE
+[here](https://dcisxo.github.io/se_project_todo-app/)
