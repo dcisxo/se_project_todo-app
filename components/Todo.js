@@ -1,12 +1,13 @@
 import { v4 as uuidv4 } from "https://jspm.dev/uuid";
 
 export class Todo {
-  constructor(data, selector) {
+  constructor(data, selector, todoCounter) {
     this.id = data.id || uuidv4();
     this.name = data.name || "New Todo";
     this.completed = data.completed || false;
     this.date = data.date || null;
     this._templateSelector = selector;
+    this._todoCounter = todoCounter;
 
     this._createTodoElement();
   }
@@ -25,13 +26,19 @@ export class Todo {
 
   _setEventListeners() {
     this._todoDeleteBtn.addEventListener("click", () => {
-      this._todoElement.remove();
+        if (this.completed) {
+            this._todoCounter.updateCompleted(false);
+        }
+        this._todoCounter.updateTotal(false);
+        this._todoElement.remove();
     });
-
+   
     this._todoCheckboxEl.addEventListener("click", () => {
       this.completed = this._todoCheckboxEl.checked;
-    });
-  }
+      // Pass true when checking, false when unchecking
+      this._todoCounter.updateCompleted(this._todoCheckboxEl.checked);
+     });
+   }
 
   getView() {
     this._todoNameEl.textContent = this.name;
